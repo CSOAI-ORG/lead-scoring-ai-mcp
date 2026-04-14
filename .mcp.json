@@ -1,20 +1,6 @@
 {
   "name": "lead-scoring-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Lead Scoring tools for AI agents and LLMs",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/lead-scoring-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
-  "tools": [
-    "score_lead"
-  ],
-  "categories": [
-    "Sales",
-    "Marketing"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+  "description": "Lead Scoring Ai Mcp \u2014 Score leads based on firmographic and behavioral data.",
+  "version": "1.0.0",
+  "tools": []
 }

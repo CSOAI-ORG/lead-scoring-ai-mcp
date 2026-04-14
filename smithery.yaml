@@ -1,10 +1,5 @@
 name: lead-scoring-ai-mcp
-description: "MEOK AI Labs — Lead Scoring tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/lead-scoring-ai-mcp
-license: MIT
-categories: [Sales, Marketing]
-tags: [lead-scoring, sales-qualification, prospect-scoring, sales-intelligence]
-runtime: python
-entrypoint: server.py
+description: "Lead Scoring Ai Mcp \u2014 Score leads based on firmographic and behavioral\
+  \ data."
+version: 1.0.0
+tools: []
