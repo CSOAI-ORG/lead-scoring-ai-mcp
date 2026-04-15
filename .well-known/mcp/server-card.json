@@ -1,0 +1,77 @@
+{
+  "name": "lead-scoring-ai",
+  "description": "B2B lead scoring with engagement tracking and prioritization.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/lead-scoring-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "score_lead",
+      "description": "Score a lead based on firmographic data"
+    },
+    {
+      "name": "add_lead",
+      "description": "Add a new lead to tracking"
+    },
+    {
+      "name": "update_lead_activity",
+      "description": "Record lead activity"
+    },
+    {
+      "name": "get_lead_score",
+      "description": "Get current score for a lead"
+    },
+    {
+      "name": "get_all_leads",
+      "description": "Get all leads with scores"
+    },
+    {
+      "name": "get_lead_activities",
+      "description": "Get activity history for a lead"
+    },
+    {
+      "name": "get_lead_timeline",
+      "description": "Get engagement timeline for a lead"
+    },
+    {
+      "name": "predict_conversion",
+      "description": "Predict conversion probability"
+    },
+    {
+      "name": "get_priority_leads",
+      "description": "Get leads by priority threshold"
+    },
+    {
+      "name": "track_engagement_trend",
+      "description": "Get engagement trend over time"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Marketing & SEO"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
