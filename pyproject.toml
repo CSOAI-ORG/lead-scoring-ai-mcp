@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 [project]
 name = "lead-scoring-ai-mcp"
 version = "1.0.0"
-description = "MEOK AI Labs — lead-scoring-ai-mcp"
+description = "Lead Scoring Ai tools for AI agents. Capabilities: score lead, add lead, update lead activity. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]

@@ -1,6 +1,6 @@
 {
   "name": "lead-scoring-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 B2B lead scoring with engagement tracking and prioritization.",
+  "description": "Lead Scoring Ai tools for AI agents. Capabilities: score lead, add lead, update lead activity. Built by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
