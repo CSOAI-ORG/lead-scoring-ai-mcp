@@ -1,6 +1,6 @@
 {
   "name": "lead-scoring-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 B2B lead scoring with engagement tracking and prioritization.",
   "version": "1.0.0",
   "tools": [
     {
@@ -8,7 +8,29 @@
       "description": "Score a lead based on firmographic data",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          },
+          "company_size": {
+            "type": "integer"
+          },
+          "budget": {
+            "type": "number"
+          },
+          "engagement_score": {
+            "type": "number"
+          },
+          "has_decision_maker_contact": {
+            "type": "boolean"
+          },
+          "email_verified": {
+            "type": "boolean"
+          },
+          "website_traffic_monthly": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     },
@@ -17,8 +39,30 @@
       "description": "Add a new lead to tracking",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          },
+          "company_name": {
+            "type": "string"
+          },
+          "contact_name": {
+            "type": "string"
+          },
+          "contact_email": {
+            "type": "string"
+          },
+          "company_size": {
+            "type": "integer"
+          },
+          "industry": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lead_id",
+          "company_name"
+        ]
       }
     },
     {
@@ -26,8 +70,21 @@
       "description": "Record lead activity",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          },
+          "activity_type": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "lead_id",
+          "activity_type"
+        ]
       }
     },
     {
@@ -35,8 +92,14 @@
       "description": "Get current score for a lead",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lead_id"
+        ]
       }
     },
     {
@@ -44,7 +107,14 @@
       "description": "Get all leads with scores",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "priority": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     },
@@ -53,8 +123,17 @@
       "description": "Get activity history for a lead",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          },
+          "days": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "lead_id"
+        ]
       }
     },
     {
@@ -62,8 +141,14 @@
       "description": "Get engagement timeline for a lead",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lead_id"
+        ]
       }
     },
     {
@@ -71,8 +156,14 @@
       "description": "Predict conversion probability",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "lead_id"
+        ]
       }
     },
     {
@@ -80,7 +171,14 @@
       "description": "Get leads by priority threshold",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "min_score": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     },
@@ -89,8 +187,17 @@
       "description": "Get engagement trend over time",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "lead_id": {
+            "type": "string"
+          },
+          "days": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "lead_id"
+        ]
       }
     }
   ]

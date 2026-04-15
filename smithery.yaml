@@ -1,34 +1,115 @@
 name: lead-scoring-ai-mcp
-description: MEOK AI Labs MCP Server
+description: B2B lead scoring with engagement tracking and prioritization.
 version: 1.0.0
 tools:
 - name: score_lead
   description: Score a lead based on firmographic data
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: false
+  - name: company_size
+    type: integer
+    required: false
+  - name: budget
+    type: number
+    required: false
+  - name: engagement_score
+    type: number
+    required: false
+  - name: has_decision_maker_contact
+    type: boolean
+    required: false
+  - name: email_verified
+    type: boolean
+    required: false
+  - name: website_traffic_monthly
+    type: integer
+    required: false
 - name: add_lead
   description: Add a new lead to tracking
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: true
+  - name: company_name
+    type: string
+    required: true
+  - name: contact_name
+    type: string
+    required: false
+  - name: contact_email
+    type: string
+    required: false
+  - name: company_size
+    type: integer
+    required: false
+  - name: industry
+    type: string
+    required: false
 - name: update_lead_activity
   description: Record lead activity
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: true
+  - name: activity_type
+    type: string
+    required: true
+  - name: metadata
+    type: object
+    required: false
 - name: get_lead_score
   description: Get current score for a lead
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: true
 - name: get_all_leads
   description: Get all leads with scores
-  parameters: []
+  parameters:
+  - name: priority
+    type: string
+    required: false
+  - name: limit
+    type: integer
+    required: false
 - name: get_lead_activities
   description: Get activity history for a lead
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: true
+  - name: days
+    type: integer
+    required: false
 - name: get_lead_timeline
   description: Get engagement timeline for a lead
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: true
 - name: predict_conversion
   description: Predict conversion probability
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: true
 - name: get_priority_leads
   description: Get leads by priority threshold
-  parameters: []
+  parameters:
+  - name: min_score
+    type: integer
+    required: false
+  - name: limit
+    type: integer
+    required: false
 - name: track_engagement_trend
   description: Get engagement trend over time
-  parameters: []
+  parameters:
+  - name: lead_id
+    type: string
+    required: true
+  - name: days
+    type: integer
+    required: false
