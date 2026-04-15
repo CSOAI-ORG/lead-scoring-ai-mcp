@@ -1,4 +1,34 @@
 name: lead-scoring-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: score_lead
+  description: Score a lead based on firmographic data
+  parameters: []
+- name: add_lead
+  description: Add a new lead to tracking
+  parameters: []
+- name: update_lead_activity
+  description: Record lead activity
+  parameters: []
+- name: get_lead_score
+  description: Get current score for a lead
+  parameters: []
+- name: get_all_leads
+  description: Get all leads with scores
+  parameters: []
+- name: get_lead_activities
+  description: Get activity history for a lead
+  parameters: []
+- name: get_lead_timeline
+  description: Get engagement timeline for a lead
+  parameters: []
+- name: predict_conversion
+  description: Predict conversion probability
+  parameters: []
+- name: get_priority_leads
+  description: Get leads by priority threshold
+  parameters: []
+- name: track_engagement_trend
+  description: Get engagement trend over time
+  parameters: []
