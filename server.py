@@ -96,6 +96,17 @@ def score_lead(lead_id: str = "", company_size: int = 0, budget: float = 0, enga
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        company_size (int): The company size to analyze or process.
+        budget (float): The budget to analyze or process.
+        engagement_score (float): The engagement score to analyze or process.
+        has_decision_maker_contact (bool): The has decision maker contact to analyze or process.
+        email_verified (bool): The email verified to analyze or process.
+        website_traffic_monthly (int): The website traffic monthly to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -157,6 +168,16 @@ def add_lead(lead_id: str, company_name: str, contact_name: str = "", contact_em
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        company_name (str): The company name to analyze or process.
+        contact_name (str): The contact name to analyze or process.
+        contact_email (str): The contact email to analyze or process.
+        company_size (int): The company size to analyze or process.
+        industry (str): The industry to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -208,6 +229,13 @@ def update_lead_activity(lead_id: str, activity_type: str, metadata: dict = None
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        activity_type (str): The activity type to analyze or process.
+        metadata (dict): The metadata to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -280,6 +308,11 @@ def get_lead_score(lead_id: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -323,6 +356,12 @@ def get_all_leads(priority: str = "all", limit: int = 50, api_key: str = "") -> 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        priority (str): The priority to analyze or process.
+        limit (int): The limit to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -370,6 +409,12 @@ def get_lead_activities(lead_id: str, days: int = 30, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        days (int): The days to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -419,6 +464,11 @@ def get_lead_timeline(lead_id: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -462,6 +512,11 @@ def predict_conversion(lead_id: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -522,6 +577,12 @@ def get_priority_leads(min_score: int = 70, limit: int = 20, api_key: str = "") 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        min_score (int): The min score to analyze or process.
+        limit (int): The limit to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -570,6 +631,12 @@ def track_engagement_trend(lead_id: str, days: int = 30, api_key: str = "") -> s
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        lead_id (str): The lead id to analyze or process.
+        days (int): The days to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
