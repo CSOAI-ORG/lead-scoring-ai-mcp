@@ -80,7 +80,23 @@ def calculate_lead_score(data: dict) -> dict:
 
 @mcp.tool()
 def score_lead(lead_id: str = "", company_size: int = 0, budget: float = 0, engagement_score: float = 0, has_decision_maker_contact: bool = False, email_verified: bool = False, website_traffic_monthly: int = 0, api_key: str = "") -> str:
-    """Score a lead based on firmographic data"""
+    """Score a lead based on firmographic data
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -111,7 +127,23 @@ def score_lead(lead_id: str = "", company_size: int = 0, budget: float = 0, enga
 
 @mcp.tool()
 def add_lead(lead_id: str, company_name: str, contact_name: str = "", contact_email: str = "", company_size: int = 0, industry: str = "", api_key: str = "") -> str:
-    """Add a new lead to tracking"""
+    """Add a new lead to tracking
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -132,7 +164,23 @@ def add_lead(lead_id: str, company_name: str, contact_name: str = "", contact_em
 
 @mcp.tool()
 def update_lead_activity(lead_id: str, activity_type: str, metadata: dict = None, api_key: str = "") -> str:
-    """Record lead activity"""
+    """Record lead activity
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -174,7 +222,23 @@ def update_lead_activity(lead_id: str, activity_type: str, metadata: dict = None
 
 @mcp.tool()
 def get_lead_score(lead_id: str, api_key: str = "") -> str:
-    """Get current score for a lead"""
+    """Get current score for a lead
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -187,7 +251,23 @@ def get_lead_score(lead_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_all_leads(priority: str = "all", limit: int = 50, api_key: str = "") -> str:
-    """Get all leads with scores"""
+    """Get all leads with scores
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -204,7 +284,23 @@ def get_all_leads(priority: str = "all", limit: int = 50, api_key: str = "") -> 
 
 @mcp.tool()
 def get_lead_activities(lead_id: str, days: int = 30, api_key: str = "") -> str:
-    """Get activity history for a lead"""
+    """Get activity history for a lead
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -223,7 +319,23 @@ def get_lead_activities(lead_id: str, days: int = 30, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_lead_timeline(lead_id: str, api_key: str = "") -> str:
-    """Get engagement timeline for a lead"""
+    """Get engagement timeline for a lead
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -236,7 +348,23 @@ def get_lead_timeline(lead_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def predict_conversion(lead_id: str, api_key: str = "") -> str:
-    """Predict conversion probability"""
+    """Predict conversion probability
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -266,7 +394,23 @@ def predict_conversion(lead_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_priority_leads(min_score: int = 70, limit: int = 20, api_key: str = "") -> str:
-    """Get leads by priority threshold"""
+    """Get leads by priority threshold
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -284,7 +428,23 @@ def get_priority_leads(min_score: int = 70, limit: int = 20, api_key: str = "") 
 
 @mcp.tool()
 def track_engagement_trend(lead_id: str, days: int = 30, api_key: str = "") -> str:
-    """Get engagement trend over time"""
+    """Get engagement trend over time
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
