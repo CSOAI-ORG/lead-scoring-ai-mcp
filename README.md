@@ -1,45 +1,64 @@
-[![lead-scoring-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/lead-scoring-ai-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/lead-scoring-ai-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/lead-scoring-ai-mcp)](https://pypi.org/project/lead-scoring-ai-mcp/)
-
-[![lead-scoring-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/lead-scoring-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/lead-scoring-ai-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/lead-scoring-ai-mcp)](https://github.com/CSOAI-ORG/lead-scoring-ai-mcp/stargazers)
+# Lead Scoring Ai MCP
 
-# uleadU scoringU aiU mcp
+**MCP server for lead scoring ai mcp operations**
 
-****
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/lead-scoring-ai-mcp)](https://www.npmjs.com/package/@meok-ai/lead-scoring-ai-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-lead-scoring-ai-mcp)](https://pypi.org/project/meok-lead-scoring-ai-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/lead-scoring-ai-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Lead Scoring Ai MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `score_lead` | Score a lead based on firmographic data |
+| `add_lead` | Add a new lead to tracking |
+| `update_lead_activity` | Record lead activity |
+| `get_lead_score` | Get current score for a lead |
+| `get_all_leads` | Get all leads with scores |
+| `get_lead_activities` | Get activity history for a lead |
+| `get_lead_timeline` | Get engagement timeline for a lead |
+| `predict_conversion` | Predict conversion probability |
+| `get_priority_leads` | Get leads by priority threshold |
+| `track_engagement_trend` | Get engagement trend over time |
 
 ## Installation
 
 ```bash
-pip install lead-scoring-ai-mcp
-# or
-npm install -g @meok-ai/lead-scoring-ai-mcp
+pip install meok-lead-scoring-ai-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "lead-scoring-ai": {
+      "command": "python",
+      "args": ["-m", "meok_lead_scoring_ai_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 10 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/lead-scoring-ai-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
