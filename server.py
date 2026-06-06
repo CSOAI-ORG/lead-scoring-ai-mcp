@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — lead-scoring-ai-mcp MCP Server. B2B lead scoring with engagement tracking and prioritization."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+MEOK AI Labs — lead-scoring-ai-mcp MCP Server. B2B lead scoring with engagement tracking and prioritization."""
 
 import json
 from datetime import datetime, timedelta, timezone
@@ -7,7 +9,6 @@ from typing import Any
 import uuid
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 from mcp.server.fastmcp import FastMCP
 from collections import defaultdict
@@ -124,7 +125,7 @@ def score_lead(lead_id: str = "", company_size: int = 0, budget: float = 0, enga
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     data = {
@@ -195,7 +196,7 @@ def add_lead(lead_id: str, company_name: str, contact_name: str = "", contact_em
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     _store["leads"][lead_id] = {
@@ -253,7 +254,7 @@ def update_lead_activity(lead_id: str, activity_type: str, metadata: dict = None
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     engagement_boost = {
@@ -330,7 +331,7 @@ def get_lead_score(lead_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if lead_id in _store["leads"]:
@@ -379,7 +380,7 @@ def get_all_leads(priority: str = "all", limit: int = 50, api_key: str = "") -> 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     leads = list(_store["leads"].values())
@@ -432,7 +433,7 @@ def get_lead_activities(lead_id: str, days: int = 30, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     cutoff = datetime.now() - timedelta(days=days)
@@ -486,7 +487,7 @@ def get_lead_timeline(lead_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     activities = [a for a in _store["activities"] if a.get("lead_id") == lead_id]
@@ -534,7 +535,7 @@ def predict_conversion(lead_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if lead_id not in _store["leads"]:
@@ -600,7 +601,7 @@ def get_priority_leads(min_score: int = 70, limit: int = 20, api_key: str = "") 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     leads = [
@@ -654,7 +655,7 @@ def track_engagement_trend(lead_id: str, days: int = 30, api_key: str = "") -> s
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     cutoff = datetime.now() - timedelta(days=days)
@@ -684,5 +685,8 @@ def track_engagement_trend(lead_id: str, days: int = 30, api_key: str = "") -> s
     )
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

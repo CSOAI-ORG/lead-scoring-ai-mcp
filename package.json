@@ -1,6 +1,6 @@
 {
   "name": "lead-scoring-ai-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lead Scoring Ai tools for AI agents. Capabilities: score lead, add lead, update lead activity. Built by MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
