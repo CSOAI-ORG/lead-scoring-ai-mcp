@@ -1,0 +1,28 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "lead-scoring-ai-mcp",
+    "description": "Lead Scoring Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "lead-scoring-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "score_lead",
+      "add_lead",
+      "update_lead_activity",
+      "get_lead_score",
+      "get_all_leads",
+      "get_lead_activities",
+      "get_lead_timeline",
+      "predict_conversion",
+      "get_priority_leads",
+      "track_engagement_trend"
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "name": "lead-scoring-ai-mcp",
+  "description": "Lead Scoring Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/lead-scoring-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "score_lead",
+      "name": "Score Lead",
+      "description": "score_lead via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "add_lead",
+      "name": "Add Lead",
+      "description": "add_lead via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "update_lead_activity",
+      "name": "Update Lead Activity",
+      "description": "update_lead_activity via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_lead_score",
+      "name": "Get Lead Score",
+      "description": "get_lead_score via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_all_leads",
+      "name": "Get All Leads",
+      "description": "get_all_leads via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_lead_activities",
+      "name": "Get Lead Activities",
+      "description": "get_lead_activities via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_lead_timeline",
+      "name": "Get Lead Timeline",
+      "description": "get_lead_timeline via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "predict_conversion",
+      "name": "Predict Conversion",
+      "description": "predict_conversion via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_priority_leads",
+      "name": "Get Priority Leads",
+      "description": "get_priority_leads via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "track_engagement_trend",
+      "name": "Track Engagement Trend",
+      "description": "track_engagement_trend via lead-scoring-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
