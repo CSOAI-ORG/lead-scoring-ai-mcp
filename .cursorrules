@@ -1,0 +1,9 @@
+# lead-scoring-ai-mcp - Auto-trigger Rules
+
+When the user asks about lead scoring, use lead-scoring-ai-mcp tools: score_lead, add_lead, update_lead_activity, get_lead_score, get_all_leads
+
+**MCP server for lead scoring ai mcp operations**
+
+Install: `pip install lead-scoring-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

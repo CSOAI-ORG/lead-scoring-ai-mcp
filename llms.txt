@@ -1,37 +1,51 @@
-# Lead Scoring Ai MCP
-
-> B2B lead scoring with engagement tracking and prioritization
-
-`lead-scoring-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# lead-scoring-ai-mcp
+# **MCP server for lead scoring ai mcp operations**
 
 ## Install
-
 ```bash
 pip install lead-scoring-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx lead-scoring-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `score_lead` — Score a lead based on firmographic data
-- `add_lead` — Add a new lead to tracking
-- `update_lead_activity` — Record lead activity
-- `get_lead_score` — Get current score for a lead
-- `get_all_leads` — Get all leads with scores
-- `get_lead_activities` — Get activity history for a lead
-- `get_lead_timeline` — Get engagement timeline for a lead
-- `predict_conversion` — Predict conversion probability
-- `get_priority_leads` — Get leads by priority threshold
-- `track_engagement_trend` — Get engagement trend over time
+### `score_lead`
+Score a lead based on firmographic data
 
-## Links
+### `add_lead`
+Add a new lead to tracking
 
-- Source: https://github.com/CSOAI-ORG/lead-scoring-ai-mcp
-- PyPI: https://pypi.org/project/lead-scoring-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `update_lead_activity`
+Record lead activity
+
+### `get_lead_score`
+Get current score for a lead
+
+### `get_all_leads`
+Get all leads with scores
+
+### `get_lead_activities`
+Get activity history for a lead
+
+### `get_lead_timeline`
+Get engagement timeline for a lead
+
+### `predict_conversion`
+Predict conversion probability
+
+### `get_priority_leads`
+Get leads by priority threshold
+
+### `track_engagement_trend`
+Get engagement trend over time
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

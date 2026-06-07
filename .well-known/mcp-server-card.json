@@ -1,0 +1,43 @@
+{
+  "name": "lead-scoring-ai-mcp",
+  "title": "Lead Scoring Ai Mcp",
+  "description": "Lead Scoring Ai tools for AI agents. Capabilities: score lead, add lead, update lead activity. Built by MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "score_lead"
+    },
+    {
+      "name": "add_lead"
+    },
+    {
+      "name": "update_lead_activity"
+    },
+    {
+      "name": "get_lead_score"
+    },
+    {
+      "name": "get_all_leads"
+    },
+    {
+      "name": "get_lead_activities"
+    },
+    {
+      "name": "get_lead_timeline"
+    },
+    {
+      "name": "predict_conversion"
+    },
+    {
+      "name": "get_priority_leads"
+    },
+    {
+      "name": "track_engagement_trend"
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 MEOK AI Labs — lead-scoring-ai-mcp MCP Server. B2B lead scoring with engagement tracking and prioritization."""
 
 import json
