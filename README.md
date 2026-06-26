@@ -113,3 +113,28 @@ Free tier: 10 calls/day per MCP. Pro tier (£79/mo): unlimited + cryptographical
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "lead-scoring-ai-mcp": {
+      "command": "uvx",
+      "args": ["lead-scoring-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install lead-scoring-ai-mcp` then run the `lead-scoring-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `score_lead` to …"
+- "Use `add_lead` to …"
+- "Use `update_lead_activity` to …"
